@@ -541,7 +541,18 @@ background-size: cover;
       .clock {
         min-width: 100px;
       }
+      .titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
     }
+      .win-icon {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #0a64f6;
+  display: inline-block;
+}
   </style>
 </head>
 <body>
@@ -624,7 +635,7 @@ background-size: cover;
      
         <div class="titlebar">
           <div class="titlebar-left">
-            <span>🪟</span>
+           <span class="win-icon"></span>
             <span class="title">System Message</span>
           </div>
           <div class="titlebar-buttons">
