@@ -554,16 +554,46 @@ background-size: cover;
   display: inline-block;
 }
 
-.notepad-text {
-  font-family: "Lucida Console", Consolas, monospace;
-  font-size: 19px;
-  line-height: 1.55;
+.notepad-menubar {
+  display: flex;
+  gap: 18px;
+  padding: 4px 10px;
+  background: #ece9d8;
+  border-bottom: 1px solid #b7b39f;
+  font-size: 13px;
   color: #000;
-  white-space: pre-line;
-  padding: 14px 16px 18px 16px;
-  min-height: 220px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 
+.notepad-page {
+  background: #ffffff;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #b7b39f;
+}
+
+.notepad-text {
+  padding: 14px 16px 18px 16px;
+  min-height: 190px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+}
+
+.notepad-text p {
+  margin: 0 0 14px;
+}
+
+.notepad-statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 8px;
+  background: #ece9d8;
+  border-top: 1px solid #ffffff;
+  font-size: 12px;
+  color: #000;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
   </style>
 </head>
 <body>
@@ -623,11 +653,13 @@ background-size: cover;
       <span class="win-icon">📄</span>
       <span class="title">bio.txt - Notepad</span>
     </div>
-    <div class="titlebar-buttons">
-      <span class="win-btn">_</span>
-      <span class="win-btn">□</span>
-      <span class="win-btn close">X</span>
-    </div>
+   <div class="notepad-menubar">
+  <span>File</span>
+  <span>Edit</span>
+  <span>Format</span>
+  <span>View</span>
+  <span>Help</span>
+</div>
   </div>
       <div class="notepad-page">
     <div class="notepad-text">
@@ -635,16 +667,17 @@ Sveiki, esmu Viktorija.
 
 Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pārvaldību ar praktiskiem, saprotamiem risinājumiem, lai samazinātu riskus un justos droši par saviem datiem un darbību.
 
-Fokuss: pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX
-Intereses: ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība
-Mērķis: veidot praktiskus, saprotamus un lietojamus drošības materiālus
+ <p><strong>Fokuss:</strong>  pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX
+ <p><strong>Intereses:</strong>  ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība
+ <p><strong>Mērķis:</strong>  veidot praktiskus, saprotamus un lietojamus drošības materiālus
     </div>
   </div>
 
   <div class="notepad-statusbar">
-    <span>Ln 1, Col 1</span>
-    <span>100%</span>
-  </div>
+  <span>Ln 1, Col 1</span>
+  <span>UTF-8</span>
+  <span>100%</span>
+</div>
 </section>
 
     <div class="grid two">
