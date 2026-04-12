@@ -553,6 +553,43 @@ background-size: cover;
   border: 1px solid #0a64f6;
   display: inline-block;
 }
+      .notepad-menubar {
+  display: flex;
+  gap: 18px;
+  padding: 4px 10px;
+  background: #ece9d8;
+  border-bottom: 1px solid #b7b39f;
+  font-size: 13px;
+  color: #000;
+}
+
+.notepad-page {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #b7b39f;
+}
+
+.notepad-text {
+  font-family: "Lucida Console", Consolas, monospace;
+  font-size: 19px;
+  line-height: 1.55;
+  color: #000;
+  white-space: pre-line;
+  padding: 14px 16px 18px 16px;
+  min-height: 220px;
+}
+
+.notepad-statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 8px;
+  background: #ece9d8;
+  border-top: 1px solid #ffffff;
+  font-size: 12px;
+  color: #000;
+}
   </style>
 </head>
 <body>
@@ -606,30 +643,35 @@ background-size: cover;
       </p>
     </section>
 
-    <section class="window">
-      <div class="titlebar">
-        <div class="titlebar-left">
-          <span>📝</span>
-          <span class="title">bio.txt - Notepad</span>
-        </div>
-        <div class="titlebar-buttons">
-          <span class="win-btn">_</span>
-          <span class="win-btn">□</span>
-          <span class="win-btn close">X</span>
-        </div>
-      </div>
-      <div class="content">
-        <h2>Sveiki, esmu Viktorija </h2>
-        <p>
-        Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pārvaldību ar praktiskiem, saprotamiem risinājumiem, lai samazinātu riskus un justos droši par saviem datiem un darbību.
-        </p>
-        <ul class="note-list">
-          <li><strong>Fokuss:</strong> pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX</li>
-          <li><strong>Intereses:</strong> ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība</li>
-          <li><strong>Mērķis:</strong> veidot praktiskus, saprotamus un lietojamus drošības materiālus</li>
-        </ul>
-      </div>
-    </section>
+   <section class="window">
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <span class="win-icon">📄</span>
+      <span class="title">bio.txt - Notepad</span>
+    </div>
+    <div class="titlebar-buttons">
+      <span class="win-btn">_</span>
+      <span class="win-btn">□</span>
+      <span class="win-btn close">X</span>
+    </div>
+  </div>
+      <div class="notepad-page">
+    <div class="notepad-text">
+Sveiki, esmu Viktorija.
+
+Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pārvaldību ar praktiskiem, saprotamiem risinājumiem, lai samazinātu riskus un justos droši par saviem datiem un darbību.
+
+Fokuss: pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX
+Intereses: ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība
+Mērķis: veidot praktiskus, saprotamus un lietojamus drošības materiālus
+    </div>
+  </div>
+
+  <div class="notepad-statusbar">
+    <span>Ln 1, Col 1</span>
+    <span>100%</span>
+  </div>
+</section>
 
     <div class="grid two">
      <section class="window">
