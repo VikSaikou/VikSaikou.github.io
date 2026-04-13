@@ -565,66 +565,6 @@ background-size: cover;
       .desktop-icon span {
   display: block;
 }
-      /* Start Pogas interaktivitāte */
-.start-button:active {
-  filter: brightness(0.8);
-  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-/* Start Menu stils */
-.start-menu {
-  position: fixed;
-  bottom: 42px;
-  left: 2px;
-  width: 380px;
-  background: white;
-  border: 2px solid #0053e2;
-  border-radius: 6px 6px 0 0;
-  display: none; /* Paslēpts pēc noklusējuma */
-  flex-direction: column;
-  box-shadow: 5px -5px 15px rgba(0,0,0,0.3);
-  z-index: 100;
-}
-
-.start-menu.active { display: flex; }
-
-.start-menu-header {
-  background: linear-gradient(to bottom, #1d6df1 0%, #3a91f4 100%);
-  padding: 10px;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 2px solid #e5ad24;
-}
-
-.user-avatar { 
-  width: 40px; height: 40px; border: 2px solid #fff; border-radius: 4px; 
-}
-
-.start-menu-content { display: grid; grid-template-columns: 1fr 120px; }
-
-.start-menu-left { padding: 10px; background: #fff; }
-.start-menu-right { padding: 10px; background: #d3e5fa; border-left: 1px solid #95b7f3; }
-
-.menu-item, .menu-item-small {
-  display: flex; align-items: center; gap: 8px;
-  padding: 8px; color: #333; font-size: 13px; text-decoration: none;
-}
-
-.menu-item:hover { background: #316ac5; color: white; }
-
-/* Desktop Ikonu uzlabojums - tagad tās izskatīsies pēc "īstām" ikonām */
-.desktop-icon {
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.desktop-icon:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
     }
   </style>
 </head>
@@ -869,29 +809,6 @@ background-size: cover;
     </div>
   </main>
 
-  <div class="start-menu" id="startMenu">
-  <div class="start-menu-header">
-    <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
-    <span class="user-name">Viktorija | Cyber Sec</span>
-  </div>
-  <div class="start-menu-content">
-    <div class="start-menu-left">
-      <a href="#" class="menu-item"><span>🔍</span> Pentest Reports</a>
-      <a href="#" class="menu-item"><span>🤖</span> AI Governance</a>
-      <a href="#" class="menu-item"><span>📧</span> Phishing Analysis</a>
-      <hr>
-      <a href="#" class="menu-item"><span>⚙️</span> Control Panel</a>
-    </div>
-    <div class="start-menu-right">
-      <a href="#" class="menu-item-small">My Documents</a>
-      <a href="#" class="menu-item-small">My Projects</a>
-      <hr>
-      <a href="#" class="menu-item-small log-off">Log Off</a>
-      <a href="#" class="menu-item-small turn-off">Turn Off</a>
-    </div>
-  </div>
-</div>
-
   <footer class="taskbar">
     <div class="start-button">
       <span class="start-logo">
@@ -931,35 +848,6 @@ background-size: cover;
 
       document.getElementById('clock-time').textContent = time;
       document.getElementById('clock-date').textContent = date;
-    }
-
-    updateClock();
-    setInterval(updateClock, 1000);
- <script>
-    // Pulksteņa funkcija
-    function updateClock() {
-      const now = new Date();
-      const time = now.toLocaleTimeString('lv-LV', { hour: '2-digit', minute: '2-digit' });
-      const date = now.toLocaleDateString('lv-LV', { day: '2-digit', month: '2-digit', year: 'numeric' });
-      
-      document.getElementById('clock-time').textContent = time;
-      document.getElementById('clock-date').textContent = date;
-    }
-
-    // Start izvēlnes loģika
-    const startBtn = document.querySelector('.start-button');
-    const startMenu = document.getElementById('startMenu');
-
-    if (startBtn && startMenu) {
-      startBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Neļauj klikšķim aizvērt izvēlni uzreiz
-        startMenu.classList.toggle('active');
-      });
-
-      // Aizvērt izvēlni, ja noklikšķina jebkur citur uz desktopa
-      document.addEventListener('click', () => {
-        startMenu.classList.remove('active');
-      });
     }
 
     updateClock();
