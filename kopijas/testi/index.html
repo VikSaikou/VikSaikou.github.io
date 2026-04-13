@@ -5,58 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cyber Workspace XP</title>
   <style>
-.desktop {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 24px 18px 92px 150px;
-  position: relative;
-  z-index: 2;
-}
-
-.desktop-icons-layer {
-  position: fixed;
-  top: 70px;
-  left: 22px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  z-index: 1;
-  width: 110px;
-}
-
-.desktop-shortcut {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  width: 96px;
-  min-height: 84px;
-  padding: 6px 4px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  user-select: none;
-}
-
-.desktop-shortcut:hover {
-  background: rgba(49, 106, 197, 0.28);
-  border: 1px solid rgba(255,255,255,0.45);
-  text-decoration: none;
-}
-
-.desktop-shortcut-icon {
-  font-size: 34px;
-  line-height: 1;
-}
-
-.desktop-shortcut-label {
-  font-size: 14px;
-  line-height: 1.2;
-  text-shadow: 1px 1px 0 #000000, 0 0 3px rgba(0,0,0,0.8);
-  word-break: break-word;
-}
     :root {
       --xp-blue-top: #0a64f6;
       --xp-blue-mid: #0058ee;
@@ -76,7 +24,7 @@
       margin: 0;
       font-family: Tahoma, Verdana, Arial, sans-serif;
       color: var(--xp-text);
- background: url("windows-xp.jpg") no-repeat center center fixed;
+  background: url("/windows-xp.jpg") no-repeat center center fixed;
 background-size: cover;
       min-height: 100vh;
     }
@@ -93,7 +41,9 @@ background-size: cover;
     .desktop {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 24px 18px 92px;
+      padding: 24px 18px 92px 150px;
+       position: relative;
+  z-index: 2;
     }
 
     .hero {
@@ -210,27 +160,40 @@ background-size: cover;
     }
 
     .desktop-icons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px 10px;
-      text-align: center;
-      padding-top: 4px;
-    }
+  position: fixed;
+  top: 70px;
+  left: 10px;
+
+  display: grid;
+  grid-template-columns: 120px;
+  gap: 25px 0;
+
+  text-align: center;
+      z-index: 5;
+}
 
     .desktop-icon {
       display: block;
       padding: 8px 6px;
       border: 1px solid transparent;
       border-radius: 6px;
-      color: #0b2d62;
-      font-size: 13px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+        font-size: 13px;
     }
-
-    .desktop-icon:hover {
-      background: rgba(60, 128, 255, 0.08);
-      border-color: #8db8ff;
-      text-decoration: none;
-    }
+.desktop-icon,
+.desktop-icon:visited,
+.desktop-icon .label,
+.desktop-icon .desktop-shortcut-label {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.95);
+}
+    .desktop-icon:hover,
+.desktop-icon:hover .label,
+.desktop-icon:hover .desktop-shortcut-label {
+  color: #ffffff;
+  text-decoration: none;
+}
 
     .desktop-icon .emoji {
       display: block;
@@ -541,102 +504,111 @@ background-size: cover;
       .clock {
         min-width: 100px;
       }
-      .titlebar-left {
+      .desktop {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 18px 92px 170px;
+  position: relative;
+  z-index: 2;
+}
+
+.desktop-icons-layer {
+  position: fixed;
+  top: 70px;
+  left: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  z-index: 1;
+  width: 110px;
+}
+
+.desktop-shortcut {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 6px;
-    }
-      .win-icon {
-  width: 12px;
-  height: 12px;
-  background: white;
-  border: 1px solid #0a64f6;
-  display: inline-block;
+  width: 96px;
+  min-height: 84px;
+  padding: 6px 4px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  user-select: none;
 }
 
-.notepad-menubar {
-  display: flex;
-  gap: 18px;
-  padding: 4px 10px;
-  background: #ece9d8;
-  border-bottom: 1px solid #b7b39f;
-  font-size: 13px;
-  color: #000;
-  font-family: Tahoma, Verdana, Arial, sans-serif;
+.desktop-shortcut:hover {
+  background: rgba(49, 106, 197, 0.28);
+  border: 1px solid rgba(255,255,255,0.45);
+  text-decoration: none;
 }
 
-.notepad-page {
-  background: #ffffff;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid #b7b39f;
+.desktop-shortcut-icon {
+  font-size: 34px;
+  line-height: 1;
 }
 
-.notepad-text {
-  padding: 14px 16px 18px 16px;
-  min-height: 190px;
-  font-family: Tahoma, Verdana, Arial, sans-serif;
+.desktop-shortcut-label {
   font-size: 14px;
-  line-height: 1.6;
-  color: #000;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.85);
+  word-break: break-word;
 }
-
-.notepad-text p {
-  margin: 0 0 14px;
+      .desktop-shortcut-label {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000, 0 0 3px rgba(0,0,0,0.8);
 }
-
-.notepad-statusbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 3px 8px;
-  background: #ece9d8;
-  border-top: 1px solid #ffffff;
-  font-size: 12px;
-  color: #000;
-  font-family: Tahoma, Verdana, Arial, sans-serif;
+      .desktop-icon span {
+  display: block;
 }
+    }
   </style>
 </head>
 <body>
   <main class="desktop">
-<div class="desktop-icons-layer">
-  <a class="desktop-shortcut" href="https://github.com/YOUR_USERNAME/thm-reports" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">📄</span>
-    <span class="desktop-shortcut-label">THM_Reports/</span>
+    <div class="desktop-icons">
+  <a class="desktop-icon" href="https://github.com/YOUR_USERNAME/thm-reports" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">📄</span>
+    <span class="label">THM_Reports/</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://github.com/YOUR_USERNAME/iso-42001-notes" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">📘</span>
-    <span class="desktop-shortcut-label">ISO42001.doc</span>
+  <a class="desktop-icon" href="https://github.com/YOUR_USERNAME/iso-42001-notes" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">📘</span>
+    <span class="label">ISO42001.doc</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://github.com/YOUR_USERNAME/sme-cybersecurity" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">🏢</span>
-    <span class="desktop-shortcut-label">SME_Security/</span>
+  <a class="desktop-icon" href="https://github.com/YOUR_USERNAME/sme-cybersecurity" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">🏢</span>
+    <span class="label">SME_Security/</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://github.com/taimurijlal/AIGovernance" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">🤖</span>
-    <span class="desktop-shortcut-label">AI_Governance/</span>
+  <a class="desktop-icon" href="https://github.com/taimurijlal/AIGovernance" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">🤖</span>
+    <span class="label">AI_Governance/</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://github.com/YOUR_USERNAME/phishing-analysis" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">📧</span>
+  <a class="desktop-icon" href="https://github.com/YOUR_USERNAME/phishing-analysis" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">📧</span>
     <span class="desktop-shortcut-label">Phishing.eml</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://github.com/YOUR_USERNAME/security-ux-examples" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">🎛️</span>
-    <span class="desktop-shortcut-label">Security_UX/</span>
+  <a class="desktop-icon" href="https://github.com/YOUR_USERNAME/security-ux-examples" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">🎛️</span>
+    <span class="label">Security_UX/</span>
   </a>
 
-  <a class="desktop-shortcut" href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" rel="noopener noreferrer">
-    <span class="desktop-shortcut-icon">🔗</span>
-    <span class="desktop-shortcut-label">LinkedIn.url</span>
+  <a class="desktop-icon" href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" rel="noopener noreferrer">
+    <span class="emoji">🔗</span>
+    <span class="label">LinkedIn.url</span>
   </a>
 
-  <a class="desktop-shortcut" href="#" title="Dekoratīva ikona">
-    <span class="desktop-shortcut-icon">🗑️</span>
-    <span class="desktop-shortcut-label">Recycle Bin</span>
+  <a class="desktop-icon" href="#" title="Dekoratīva ikona">
+    <span class="emoji">🗑️</span>
+    <span class="label">Recycle Bin</span>
   </a>
 </div>
     <section class="hero">
@@ -647,44 +619,36 @@ background-size: cover;
       </p>
     </section>
 
-   <section class="window" style="max-width: 600px;">
-  <div class="titlebar">
-    <div class="titlebar-left">
-      <span class="win-icon">📄</span>
-      <span class="title">bio.txt - Notepad</span>
-    </div>
-   <div class="notepad-menubar">
-  <span>File</span>
-  <span>Edit</span>
-  <span>Format</span>
-  <span>View</span>
-  <span>Help</span>
-</div>
-  </div>
-      <div class="notepad-page">
-    <div class="notepad-text">
-Sveiki, esmu Viktorija.
+    <section class="window">
+      <div class="titlebar">
+        <div class="titlebar-left">
+          <span>📝</span>
+          <span class="title">bio.txt - Notepad</span>
+        </div>
+        <div class="titlebar-buttons">
+          <span class="win-btn">_</span>
+          <span class="win-btn">□</span>
+          <span class="win-btn close">X</span>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Sveiki, esmu Viktorija </h2>
+        <p>
+          Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pārvaldību ar praktiskiem, saprotamiem risinājumiem, lai samazinātu riskus un justos droši par saviem datiem un darbību.
+        </p>
+        <ul class="note-list">
+          <li><strong>Fokuss:</strong> pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX</li>
+          <li><strong>Intereses:</strong> ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība</li>
+          <li><strong>Mērķis:</strong> veidot praktiskus, saprotamus un lietojamus drošības materiālus</li>
+        </ul>
+      </div>
+    </section>
 
-Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pārvaldību ar praktiskiem, saprotamiem risinājumiem, lai samazinātu riskus un justos droši par saviem datiem un darbību.
 
- <p><strong>Fokuss:</strong>  pentest atskaites, pikšķerēšanas e-pastu analīze, drošības UX
- <p><strong>Intereses:</strong>  ISO/IEC 42001, AI governance, mikro un mazo uzņēmumu kiberdrošība
- <p><strong>Mērķis:</strong>  veidot praktiskus, saprotamus un lietojamus drošības materiālus
-    </div>
-  </div>
-
-  <div class="notepad-statusbar">
-  <span>Ln 1, Col 1</span>
-  <span>UTF-8</span>
-  <span>100%</span>
-</div>
-</section>
-
-    <div class="grid two">
-     <section class="window">
+      <section class="window">
         <div class="titlebar">
           <div class="titlebar-left">
-           <span class="win-icon"></span>
+            <span>🪟</span>
             <span class="title">System Message</span>
           </div>
           <div class="titlebar-buttons">
@@ -701,7 +665,7 @@ Palīdzu cilvēkiem un mazām organizācijām sakārtot kiberdrošību un AI pā
               Šī darbstacija fokusējas uz saprotamu un pielietojamu drošību:
               dokumentēšana, analīze, pārvaldība un lietotājam draudzīgi risinājumi.
               <div style="margin-top: 14px; text-align: right;">
-                <a class="xp-button" href="https://github.com/VikSaikou" target="_blank" rel="noopener noreferrer">OK</a>
+                <a class="xp-button" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">OK</a>
               </div>
             </div>
           </div>
