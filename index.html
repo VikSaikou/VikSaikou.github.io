@@ -161,18 +161,18 @@ background-size: cover;
 
  .desktop-icons {
   position: fixed;
-  top: 150px;
-  left: 28px;
+  top: 130px;
+  left: 26px;
   display: grid;
-  grid-template-columns: 96px;
-  row-gap: 18px;
+  grid-template-columns: 112px;
+  row-gap: 12px;
   z-index: 2;
   text-align: center;
 }
 
 .desktop-icon {
-  width: 96px;
-  min-height: 86px;
+  width: 112px;
+  min-height: 78px;
   padding: 6px 4px;
   display: flex;
   flex-direction: column;
@@ -211,11 +211,14 @@ background-size: cover;
 
 .desktop-icon .label {
   display: block;
-  font-size: 13px;
+  max-width: 106px;
+  font-size: 12px;
   line-height: 1.15;
   color: #ffffff;
   text-shadow: 1px 1px 0 #000000, 0 0 3px rgba(0, 0, 0, 0.85);
-  word-break: break-word;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
     .explorer {
