@@ -623,17 +623,27 @@ background-size: cover;
       </div>
     </section>
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: url('windows-xp.jpg') center center / cover no-repeat fixed;
-}
+<section class="window" aria-labelledby="projects-title">
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <span aria-hidden="true">📝</span>
+      <span class="title">projects.txt - Notepad</span>
+    </div>
+
+    <div class="titlebar-buttons" aria-hidden="true">
+      <span class="win-btn">_</span>
+      <span class="win-btn">□</span>
+      <span class="win-btn close">X</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 id="projects-title">Public Projects</h2>
 
 <div class="project-grid">
   <article class="project-card">
     <div class="project-card-header">
-      <div class="project-title-group">
-        <span class="project-icon" aria-hidden="true">🧩</span>
+      <div class="project-title-group">       
         <h3 class="project-title">
           ISO/IEC 27001 Control Dependency Map
         </h3>
@@ -678,8 +688,7 @@ body {
 
   <article class="project-card">
     <div class="project-card-header">
-      <div class="project-title-group">
-        <span class="project-icon" aria-hidden="true">📚</span>
+      <div class="project-title-group">        
         <h3 class="project-title">Security Knowledge Base</h3>
       </div>
 
@@ -720,6 +729,8 @@ body {
     </div>
   </article>
 </div>
+      </div>
+</section>
     
     <div class="grid equal">
       <section class="window">
