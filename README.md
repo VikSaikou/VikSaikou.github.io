@@ -14,3 +14,4 @@ and reviewable evidence.
 
 - [ISO/IEC 27001 Control Dependency Map](https://github.com/VikSaikou/iso27001-control-dependency-map)
 - [Security Knowledge Base](https://github.com/VikSaikou/security-knowledge-base)
+- [From TryHackMe Lab to Pentest Report (*Latviski*)] (https://github.com/VikSaikou/thm-lidz-pentest-atskaitei)
